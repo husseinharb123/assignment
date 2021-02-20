@@ -23,3 +23,5 @@ while True:
         
         
 # source : i have used the slides and book 
+
+# sir since 9 am , iam trying to run both file(cleint and server )simultaneously .but it didn,t worked
