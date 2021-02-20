@@ -1,7 +1,7 @@
 import socket
 import time
 
-date =("time.ctime() : %s" % time.ctime())[14:]   # local time and date
+date =("time.ctime() : %s" % time.ctime())[14:]   # local time and date     ## source stackoverflow
 
 
 local_ip = "127.0.0.1"  # server address
@@ -20,3 +20,6 @@ while True:
     
     if message:
         mysocket.sendto(message, address_client)  #resend the recieved message 
+        
+        
+# source : i have used the slides and book 
