@@ -14,10 +14,10 @@ for i in range(5): # sending message  5 times
     start = datetime.now()  # start couting 
     clientSocket.sendto(request_string.encode(),(serverip, serverPort))
     recmsg, serverAddress = clientSocket.recvfrom(4094)
-    end = datetime.now() # end counting 
+    end = datetime.now() # end counting ## source stackoverflow
     
     RTT = end - start  #roundtrip time
-    time = int(RTT.microseconds)  # time in microsecond
+    time = int(RTT.microseconds)  # time in microsecond   ## source stackoverflow
     i+=1
     print(f"RTT ({i}) : {time} μs ") # print RTT for each rely/rec pair
     RTT_total+= RTT   #  total RTT 
@@ -25,3 +25,5 @@ for i in range(5): # sending message  5 times
 print(F"AVERGE RTT : {RTT_total / 5} μs ")  # print averge RTT
 
 clientSocket.close()  #close the socket 
+
+
